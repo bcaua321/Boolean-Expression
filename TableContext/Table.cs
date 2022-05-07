@@ -10,7 +10,7 @@ public class Table
     {
         _size = size;
         _table = new List<List<string>>();
-        CreateTable();
+        CreateTruthTable();
     }
 
     private bool AcceptedTable(int size)
@@ -29,7 +29,7 @@ public class Table
         return size == elements;
     }
 
-    public void CreateTable()
+    public void CreateTruthTable()
     {
         if (!AcceptedTable(_size))
         {
@@ -60,15 +60,5 @@ public class Table
             _size /=  2;
             _table.Add(listElement);
         }
-
-        foreach (List<string> list in _table)
-        {
-            foreach (string item in list)
-            {
-                Console.Write($"{item} ");
-            }
-            Console.WriteLine("\n");
-        }
     }
-    
 }

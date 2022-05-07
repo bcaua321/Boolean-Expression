@@ -35,14 +35,11 @@ public class ReadExitTable
         }
 
         MatchCollection mc = _erValid.Matches(content);
-        Console.WriteLine("\n\n\n");
-        Console.WriteLine("Valores: ");
+
         foreach (Match match in mc)
         {
-            Console.WriteLine(match);
             Matches.Add(match.Value);
         }
-
-        Console.WriteLine("Tamanho: " + NumbersLength);
+        
     }
 }

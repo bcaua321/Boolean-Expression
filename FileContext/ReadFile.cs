@@ -14,9 +14,9 @@ public class ReadFile
 
     private void GetFile()
     {
-        Console.WriteLine("Insira o caminho global do arquivo: ");
-        Console.WriteLine(@"Exemplo ruindows: c:\temp\test.txt");
-        Console.WriteLine(@"Exemplo linux/unix: /home/test.txt");
+        Console.WriteLine("Insert the path of file: ");
+        Console.WriteLine(@"Example windows: c:\temp\test.txt");
+        Console.WriteLine(@"Example linux/unix: /home/test.txt");
         Path = Console.ReadLine();
         Read();
     }
@@ -26,12 +26,11 @@ public class ReadFile
         if (!File.Exists(Path))
         {
             Console.WriteLine(Path);
-            Console.WriteLine("Não foi possível encontrar o arquivo ou não existe");
+            Console.WriteLine("It's not possible to find the file or the file doesn't exists");
             return;
         }
 
         ContentArray = File.ReadAllText(Path).Split(' ', '\n');
         Content = String.Join("", ContentArray);
-        Console.WriteLine(Content);
     }
 }
